@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Festejamos a Erika!</title>
+    <link href=""https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">" rel="stylesheet">
+    <style>
+        /* ESTILOS */
+        body {
+            font-family: 'Erika Alatorre', sans-serif; /* Estilo de letra para párrafos */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            background-color: #f9f4ef;
+        }
+        
+        /* PORTADA */
+        header {
+            /* RECUERDA: Subir tu foto como 'portada.jpg' */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('portada.jpg'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .intro-text {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+            padding: 10px 0;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif; /* Estilo de letra elegante para el título */
+            font-size: 2.8em;
+            margin: 10px 0;
+            line-height: 1.3;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+
+        .gold-text { color: #d4af37; } 
+
+        /* CUENTA REGRESIVA */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .time-box {
+            background: rgba(0,0,0,0.6);
+            padding: 15px;
+            min-width: 60px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 5px;
+        }
+        .number { font-family: 'Cinzel', serif; font-size: 1.8em; color: #d4af37; display: block; }
+        .label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+        
+        /* SECCIONES */
+        section { padding: 70px 20px; }
+        .bg-white { background-color: white; }
+        
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #bfa058;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 2px;
+            width: 100px;
+            background-color: #d4af37;
+            margin: 0 auto 30px auto;
+        }
+
+        .details p { font-size: 1.3em; line-height: 1.8; color: #555; }
+        
+        /* MAPA */
+        .map-container {
+            margin: 30px auto;
+            max-width: 900px;
+            height: 450px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* BOTÓN WHATSAPP */
+        .btn-rsvp {
+            background-color: #128C7E;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-rsvp:hover { background-color: #075E54; transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="intro-text">¡Celebramos la Vida y el Amor!</div>
+        
+        <h1>
+            CUMPLEAÑOS 50 DE<br>
+            <span class="gold-text">Erika Alatorre</span>
+            <br><span style="font-size:0.5em; display:block; margin:20px 0;">&</span>
+            1ER ANIVERSARIO DE CASADOS<br>
+            <span class="gold-text">Erika & Rafael</span> </h1>
+        
+        <div class="countdown" id="reloj">
+            <div class="time-box"><span class="number" id="dias">00</span><span class="label">Días</span></div>
+            <div class="time-box"><span class="number" id="horas">00</span><span class="label">Hrs</span></div>
+            <div class="time-box"><span class="number" id="minutos">00</span><span class="label">Min</span></div>
+            <div class="time-box"><span class="number" id="segundos">00</span><span class="label">Seg</span></div>
+        </div>
+    </header>
+
+    <section class="bg-white">
+        <h2>Cuándo y Dónde</h2>
+        <div class="divider"></div>
+        <div class="details">
+            <p>Será un honor contar con tu presencia</p>
+            <br>
+            <p>📅 <strong>Sábado, 14 de Febrero, 2026</strong></p>
+            <p>⏰ <strong>Recepción: 7:30 PM (19:30 hrs)</strong></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ubicación</h2>
+        <div class="divider"></div>
+        <p>Te esperamos para celebrar en grande</p>
+        
+        <div class="map-container">
+            <p style="color: #999;">https://maps.app.goo.gl/izXcAiQraAYbhrd58</p>
+        </div>
+        
+        <br>
+        <a href="#" target="_blank" style="color: #bfa058; text-decoration: underline;">Abrir ubicación en GPS</a>
+    </section>
+
+    <section class="bg-white">
+        <h2>Confirmación</h2>
+        <div class="divider"></div>
+        <p>Próximamente podrás confirmar tu asistencia aquí.</p>
+        
+        " DEL PRINCIPIO Y FINAL
+           
+        </section>
+
+    <script>
+        const fechaEvento = "Feb 14, 2026 19:30:00"; 
+
+        const countDownDate = new Date(fechaEvento).getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").innerText = days;
+            document.getElementById("horas").innerText = hours;
+            document.getElementById("minutos").innerText = minutes;
+            document.getElementById("segundos").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("reloj").innerHTML = "¡BIENVENIDOS!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
