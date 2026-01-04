@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Festejamos a Erika!</title>
-    <link href=""https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <style>
         /* ESTILOS */
         body {
-            font-family: 'Erika Alatorre', sans-serif; /* Estilo de letra para párrafos */
+            /* CORREGIDO: Regresamos a Montserrat para que se lea bonito */
+            font-family: 'Montserrat', sans-serif; 
             margin: 0;
             padding: 0;
             color: #333;
@@ -18,7 +19,6 @@
         
         /* PORTADA */
         header {
-            /* RECUERDA: Subir tu foto como 'portada.jpg' */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('portada.jpg'); 
             background-size: cover;
             background-position: center;
@@ -43,7 +43,7 @@
         }
 
         h1 {
-            font-family: 'Playfair Display', serif; /* Estilo de letra elegante para el título */
+            font-family: 'Playfair Display', serif;
             font-size: 2.8em;
             margin: 10px 0;
             line-height: 1.3;
@@ -95,7 +95,7 @@
         .map-container {
             margin: 30px auto;
             max-width: 900px;
-            height: 450px;
+            /* height: 450px;  <-- Quitamos la altura fija para que se ajuste al mapa */
             background-color: #eee;
             display: flex;
             align-items: center;
@@ -103,7 +103,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* BOTÓN WHATSAPP */
+        /* BOTÓN WHATSAPP Y MAPA */
         .btn-rsvp {
             background-color: #128C7E;
             color: white;
@@ -116,6 +116,18 @@
             display: inline-block;
             transition: all 0.3s ease;
         }
+        
+        .btn-gold {
+            background-color: #bfa058;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
         .btn-rsvp:hover { background-color: #075E54; transform: scale(1.05); }
 
     </style>
@@ -157,20 +169,17 @@
         <p>Te esperamos para celebrar en grande</p>
         
         <div class="map-container">
-            <p style="color: #999;">https://maps.app.goo.gl/izXcAiQraAYbhrd58</p>
+            <p style="padding:40px; color: #999;">(Pega aquí el código < iframe > de Google Maps)</p>
         </div>
         
         <br>
-        <a href="#" target="_blank" style="color: #bfa058; text-decoration: underline;">Abrir ubicación en GPS</a>
+        <a href="#" target="_blank" class="btn-gold">Abrir ubicación en GPS</a>
     </section>
 
     <section class="bg-white">
         <h2>Confirmación</h2>
         <div class="divider"></div>
         <p>Próximamente podrás confirmar tu asistencia aquí.</p>
-        
-        " DEL PRINCIPIO Y FINAL
-           
         </section>
 
     <script>
