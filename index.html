@@ -6,19 +6,19 @@
     <title>¡Festejamos a Erika!</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        /* ESTILOS */
+        /* ESTILOS VISUALES */
         body {
-            /* CORREGIDO: Regresamos a Montserrat para que se lea bonito */
             font-family: 'Montserrat', sans-serif; 
             margin: 0;
             padding: 0;
             color: #333;
             text-align: center;
-            background-color: #f9f4ef;
+            background-color: #f9f4ef; /* Color crema elegante */
         }
         
         /* PORTADA */
         header {
+            /* IMPORTANTE: Tu foto debe llamarse 'portada.jpg' en GitHub */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('portada.jpg'); 
             background-size: cover;
             background-position: center;
@@ -44,13 +44,13 @@
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8em;
-            margin: 10px 0;
+            font-size: 2.5em;
+            margin: 15px 0;
             line-height: 1.3;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
-        .gold-text { color: #d4af37; } 
+        .gold-text { color: #d4af37; } /* Dorado */
 
         /* CUENTA REGRESIVA */
         .countdown {
@@ -63,60 +63,49 @@
         .time-box {
             background: rgba(0,0,0,0.6);
             padding: 15px;
-            min-width: 60px;
+            min-width: 65px;
             border: 1px solid rgba(212, 175, 55, 0.5);
-            border-radius: 5px;
+            border-radius: 8px;
         }
         .number { font-family: 'Cinzel', serif; font-size: 1.8em; color: #d4af37; display: block; }
         .label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
         
         /* SECCIONES */
-        section { padding: 70px 20px; }
+        section { padding: 60px 20px; }
         .bg-white { background-color: white; }
         
         h2 {
             font-family: 'Cinzel', serif;
             color: #bfa058;
-            font-size: 2.2em;
+            font-size: 2em;
             margin-bottom: 30px;
             text-transform: uppercase;
         }
 
         .divider {
-            height: 2px;
-            width: 100px;
+            height: 3px;
+            width: 80px;
             background-color: #d4af37;
             margin: 0 auto 30px auto;
         }
 
-        .details p { font-size: 1.3em; line-height: 1.8; color: #555; }
+        .details p { font-size: 1.2em; line-height: 1.6; color: #555; margin: 10px 0; }
+        .venue-name { font-weight: bold; font-size: 1.4em; color: #333; font-family: 'Playfair Display', serif;}
         
         /* MAPA */
         .map-container {
-            margin: 30px auto;
+            margin: 20px auto;
             max-width: 900px;
-            /* height: 450px;  <-- Quitamos la altura fija para que se ajuste al mapa */
+            height: 400px;
             background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        /* BOTÓN WHATSAPP Y MAPA */
-        .btn-rsvp {
-            background-color: #128C7E;
-            color: white;
-            padding: 18px 45px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
+        iframe { width: 100%; height: 100%; border: 0; }
+
+        /* BOTONES */
         .btn-gold {
             background-color: #bfa058;
             color: white;
@@ -125,10 +114,11 @@
             border-radius: 50px;
             font-weight: bold;
             display: inline-block;
+            margin-top: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
         }
-        
-        .btn-rsvp:hover { background-color: #075E54; transform: scale(1.05); }
+        .btn-gold:hover { background-color: #a88b45; transform: translateY(-2px); }
 
     </style>
 </head>
@@ -142,7 +132,8 @@
             <span class="gold-text">Erika Alatorre</span>
             <br><span style="font-size:0.5em; display:block; margin:20px 0;">&</span>
             1ER ANIVERSARIO DE CASADOS<br>
-            <span class="gold-text">Erika & Rafael</span> </h1>
+            <span class="gold-text">Erika & Rafael</span> 
+        </h1>
         
         <div class="countdown" id="reloj">
             <div class="time-box"><span class="number" id="dias">00</span><span class="label">Días</span></div>
@@ -156,7 +147,7 @@
         <h2>Cuándo y Dónde</h2>
         <div class="divider"></div>
         <div class="details">
-            <p>Será un honor contar con tu presencia</p>
+            <p>Será un honor contar con su presencia en esta doble celebración.</p>
             <br>
             <p>📅 <strong>Sábado, 14 de Febrero, 2026</strong></p>
             <p>⏰ <strong>Recepción: 7:30 PM (19:30 hrs)</strong></p>
@@ -166,23 +157,34 @@
     <section>
         <h2>Ubicación</h2>
         <div class="divider"></div>
-        <p>Te esperamos para celebrar en grande</p>
+        
+        <p class="venue-name">Salón Eiffel Palace</p>
+        <div class="details">
+            <p>Calz. Ermita Iztapalapa 1472, San Miguel,<br>09360 Ciudad de México, CDMX</p>
+        </div>
         
         <div class="map-container">
-            <p style="padding:40px; color: #999;">(Pega aquí el código < iframe > de Google Maps)</p>
+            <iframe 
+                src="https://maps.google.com/maps?q=Salón+Eiffel+Palace+Iztapalapa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0" 
+                marginwidth="0">
+            </iframe>
         </div>
         
         <br>
-        <a href="#" target="_blank" class="btn-gold">Abrir ubicación en GPS</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Salón+Eiffel+Palace+Ermita+Iztapalapa+1472" target="_blank" class="btn-gold">📍 Abrir ubicación en GPS</a>
     </section>
 
     <section class="bg-white">
         <h2>Confirmación</h2>
         <div class="divider"></div>
         <p>Próximamente podrás confirmar tu asistencia aquí.</p>
-        </section>
+    </section>
 
     <script>
+        // FECHA: 14 Febrero 2026, 19:30
         const fechaEvento = "Feb 14, 2026 19:30:00"; 
 
         const countDownDate = new Date(fechaEvento).getTime();
