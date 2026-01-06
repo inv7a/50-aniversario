@@ -13,12 +13,10 @@
             padding: 0;
             color: #333;
             text-align: center;
-            background-color: #f9f4ef; /* Color crema elegante */
+            background-color: #f9f4ef;
         }
         
-        /* PORTADA */
         header {
-            /* IMPORTANTE: Tu foto debe llamarse 'portada.jpg' en GitHub */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('portada.jpg'); 
             background-size: cover;
             background-position: center;
@@ -50,9 +48,8 @@
             text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
-        .gold-text { color: #d4af37; } /* Dorado */
+        .gold-text { color: #d4af37; }
 
-        /* CUENTA REGRESIVA */
         .countdown {
             display: flex;
             justify-content: center;
@@ -70,7 +67,6 @@
         .number { font-family: 'Cinzel', serif; font-size: 1.8em; color: #d4af37; display: block; }
         .label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
         
-        /* SECCIONES */
         section { padding: 60px 20px; }
         .bg-white { background-color: white; }
         
@@ -92,7 +88,6 @@
         .details p { font-size: 1.2em; line-height: 1.6; color: #555; margin: 10px 0; }
         .venue-name { font-weight: bold; font-size: 1.4em; color: #333; font-family: 'Playfair Display', serif;}
         
-        /* MAPA */
         .map-container {
             margin: 20px auto;
             max-width: 900px;
@@ -105,7 +100,6 @@
 
         iframe { width: 100%; height: 100%; border: 0; }
 
-        /* BOTONES */
         .btn-gold {
             background-color: #bfa058;
             color: white;
@@ -120,7 +114,6 @@
         }
         .btn-gold:hover { background-color: #a88b45; transform: translateY(-2px); }
 
-        /* ESTILOS DEL REPRODUCTOR DE MÚSICA */
         .music-control {
             position: fixed;
             bottom: 20px;
@@ -138,14 +131,12 @@
             border: 2px solid white;
             animation: pulse 2s infinite;
         }
-        /* Animación para que el botón "palpite" */
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
             100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
         }
 
-        /* BOTÓN WHATSAPP */
         .btn-rsvp {
             background-color: #128C7E;
             color: white;
@@ -222,7 +213,17 @@
         </div>
         
         <br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Salón+Eiffel+Palace+Ermita+Iztapalapa+1472" target="_blank" class="btn-gold">📍 Abrir ubicación en GPS</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Salón+Eiffel+Palace+Ermita+Iztapalapa+1472" target="_blank" class="btn-gold">📍 Abrir Salón en GPS</a>
+
+        <br><br><br>
+        <div style="border-top: 1px dashed #d4af37; width: 50%; margin: 20px auto;"></div>
+        
+        <h3 style="font-family: 'Cinzel', serif; color: #bfa058; font-size: 1.5em; margin-top: 20px;">🅿️ Estacionamiento</h3>
+        <p>Contamos con estacionamiento en la ubicación:</p>
+        <p style="font-weight: bold; color: #555;">9W2G+87V Ciudad de México</p>
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=9W2G%2B87V+Ciudad+de+México" target="_blank" class="btn-gold" style="background-color: #555;">🚗 Abrir Estacionamiento en GPS</a>
+
     </section>
 
     <section class="bg-white">
@@ -264,17 +265,17 @@
             }
         }, 1000);
 
-        // --- LÓGICA DE LA MÚSICA (NUEVO) ---
+        // --- LÓGICA DE LA MÚSICA ---
         function toggleMusic() {
             const audio = document.getElementById("audioPlayer");
             const icon = document.getElementById("musicIcon");
             
             if (audio.paused) {
                 audio.play();
-                icon.innerText = "🎵"; // Cambia el icono a nota musical
+                icon.innerText = "🎵"; 
             } else {
                 audio.pause();
-                icon.innerText = "🔇"; // Cambia el icono a silencio
+                icon.innerText = "🔇"; 
             }
         }
     </script>
