@@ -184,7 +184,7 @@
         <h2>Ubicación</h2>
         <div class="divider"></div>
         
-        <p class="venue-name">Salón Eiffel Palace</p>
+        <p class="venue-name">Eiffel Palace</p>
         <div class="details">
             <p>Calz. Ermita Iztapalapa 1472, San Miguel,<br>09360 Ciudad de México, CDMX</p>
         </div>
@@ -197,64 +197,4 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://maps.google.com/maps?q=Calz.+Ermita+Iztapalapa+1472,+San+Miguel,+09360+Ciudad+de+México,+CDMX&t=&z=15&ie=UTF8&iwloc=&output=embed">
-            </iframe>
-        </div>
-        
-        <br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Calz.+Ermita+Iztapalapa+1472,+San+Miguel,+09360+Ciudad+de+México,+CDMX" target="_blank" class="btn-gold">📍 Abrir Salón en GPS</a>
-
-        <br><br><br>
-        <div style="border-top: 1px dashed #d4af37; width: 50%; margin: 20px auto;"></div>
-        
-        <h3 style="font-family: 'Cinzel', serif; color: #bfa058; font-size: 1.5em; margin-top: 20px;">🅿️ Estacionamiento</h3>
-        <p>Contamos con estacionamiento en la ubicación:</p>
-        <p style="font-weight: bold; color: #555;">9W2G+87V Ciudad de México</p>
-        
-        <a href="https://www.google.com/maps/search/?api=1&query=9W2G%2B87V+Ciudad+de+México" target="_blank" class="btn-gold" style="background-color: #555;">🚗 Abrir Estacionamiento en GPS</a>
-
-    </section>
-
-    <script>
-        // FECHA: 14 Febrero 2026, 19:30
-        const fechaEvento = "Feb 14, 2026 19:30:00"; 
-
-        const countDownDate = new Date(fechaEvento).getTime();
-
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("dias").innerText = days;
-            document.getElementById("horas").innerText = hours;
-            document.getElementById("minutos").innerText = minutes;
-            document.getElementById("segundos").innerText = seconds;
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("reloj").innerHTML = "¡BIENVENIDOS!";
-            }
-        }, 1000);
-
-        // --- LÓGICA DE LA MÚSICA ---
-        function toggleMusic() {
-            const audio = document.getElementById("audioPlayer");
-            const icon = document.getElementById("musicIcon");
-            
-            if (audio.paused) {
-                audio.play();
-                icon.innerText = "🎵"; 
-            } else {
-                audio.pause();
-                icon.innerText = "🔇"; 
-            }
-        }
-    </script>
-
-</body>
-</html>
+                src="
